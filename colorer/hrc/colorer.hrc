@@ -41,14 +41,14 @@
     <firstline>/^\s*&lt;((!DOCTYPE\s+)?HTML|!\-\-)/i</firstline>
   </prototype>
   <prototype name="xhtml-strict" group="inet" description="xhtml strict" targetNamespace="http://www.w3.org/1999/xhtml">
-    <location link="inet/xhtml-strict.hrc"/>
+    <location link="jar:inet/xhtml.jar!xhtml-strict.hrc"/>
     <filename>/\.html?/ix</filename>
     <filename>/\.xhtml?/ix</filename>
     <firstline weight='0.5'>/^&lt;\?xml/</firstline>
     <firstline weight='2'>/DTD XHTML.*?Strict/i</firstline>
   </prototype>
   <prototype name="xhtml-trans" group="inet" description="xhtml transitional" targetNamespace="http://www.w3.org/1999/xhtml">
-    <location link="inet/xhtml-trans.hrc"/>
+    <location link="jar:inet/xhtml.jar!xhtml-trans.hrc"/>
     <filename>/\.html?/ix</filename>
     <filename>/\.xhtml?/ix</filename>
     <firstline weight='0.5'>/^&lt;\?xml/</firstline>
@@ -88,7 +88,7 @@
   </prototype>
   <prototype name="jsp" group="inet" description="jsp">
     <location link="inet/jsp.hrc"/>
-    <filename>/\.jsp$/i</filename>
+    <filename>/\.(jsp|jspf)$/i</filename>
   </prototype>
   <prototype name="php" group="inet" description="php">
     <location link="inet/php.hrc"/>
@@ -304,6 +304,10 @@
     <firstline>/(REM)?\/\*/i</firstline>
     <firstline>/^# regina/i</firstline>
   </prototype>
+  <prototype name="ruby" group="rare" description="Ruby">
+    <location link="rare/ruby.hrc"/>
+    <filename>/\.(rb|ruby)$/i</filename>
+  </prototype>
   <prototype name="sml" group="rare" description="StandardML">
     <location link="rare/sml.hrc"/>
     <filename>/\.(sml|ml|mli)$/i</filename>
@@ -356,10 +360,10 @@
   </prototype>
   <prototype name="config" group="scripts" description="Config, INI and CTL">
     <location link="scripts/config.hrc"/>
-    <filename>/\.(ctl|tpl|ini|cfg|inf|srg|conf[^\.]*|types|tab|dof|dsk|lng)$/i</filename>
+    <filename weight='1'>/\.(ctl|tpl|ini|cfg|inf|srg|conf[^\.]*|types|tab|dof|dsk|lng)$/i</filename>
     <firstline>/^[;\[\#]/</firstline>
   </prototype>
-  <prototype name="linkdef" group="scripts" description="link defines">
+  <prototype name="linkdef" group="scripts" description="Link Defines">
     <location link="scripts/def.hrc"/>
     <filename>/\.def$/i</filename>
   </prototype>
