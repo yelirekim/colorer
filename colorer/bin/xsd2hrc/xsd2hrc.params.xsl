@@ -29,13 +29,17 @@
 
   <xsl:param name="include-prototype" select="'no'"/>
 
+  <!-- If yes, ignores all annotation/documentation elements in schema -->
+
+  <xsl:param name="drop-annotations" select="'no'"/>
+
   <!-- path to HRC catalog (colorer.hrc) -->
 
   <xsl:param name="catalog-path" select="'../../hrc/colorer.hrc'"/>
 
   <!-- path to custom parser file -->
 
-  <xsl:param name="custom-defines" select="'custom.default.xml'"/>
+  <xsl:param name="custom-defines" select="'schemas-custom/custom.default.xml'"/>
 
   <!-- Use specified single top-level element
        If not specified, all global elements could be at top level of file.
@@ -63,7 +67,7 @@
    - The Original Code is the Colorer Library xsd2hrc module.
    -
    - The Initial Developer of the Original Code is
-   - Cail Lomecb <ruiv@uic.nnov.ru>.
+   - Cail Lomecb <cail@nm.ru>.
    - Portions created by the Initial Developer are Copyright (C) 1999-2003
    - the Initial Developer. All Rights Reserved.
    -

@@ -1,28 +1,34 @@
 <?xml version="1.0" encoding="windows-1251"?>
 <!-- PUBLIC "-//OASIS//DTD DocBook V4.2//EN" -->
 <!DOCTYPE article[
-<!ENTITY fileref "file:/d:/programs/devel/colorer/doc/2003/hrc.xsd">
-<!ENTITY hrdref "file:/d:/programs/devel/colorer/doc/2003/hrd.xsd">
-<!ENTITY catalogref "file:/d:/programs/devel/colorer/doc/2003/catalog.xsd">
+<!--<!ENTITY colorerloc "file:/d:/programs/devel/colorer">-->
+<!ENTITY colorerloc "file:/c:/progra~1/colorer">
+<!ENTITY fileref "&colorerloc;/doc/2003/hrc.xsd">
+<!ENTITY hrdref "&colorerloc;/doc/2003/hrd.xsd">
+<!ENTITY catalogref "&colorerloc;/doc/2003/catalog.xsd">
 ]>
 <article lang="en" xmlns:x="uri:custom:schema-db">
 
 <articleinfo>
 
-<releaseinfo>Colorer library HRC Reference take5.alpha3. March 2003</releaseinfo>
+<releaseinfo>Colorer library HRC Reference take5.beta2. June 2003</releaseinfo>
 <title>HRC Language Reference</title>
 
-<pubdate>30 March 2003</pubdate>
+<pubdate>30 June 2003</pubdate>
 
 <revhistory>
 <revision>
-  <revnumber>take5.beta1</revnumber>
-  <date>30 March 2003</date>
+  <revnumber>take5.beta2</revnumber>
+  <date>?? June 2003</date>
   <revremark>(Available as
     <ulink url='http://colorer.sf.net/hrc-ref/'>HTML</ulink>,
     <ulink url='http://colorer.sf.net/hrc-ref/hrc-ref.pdf'>PDF</ulink>,
     <ulink url='http://colorer.sf.net/hrc-ref/hrc-ref.zip'>DocBook</ulink>)
   </revremark>
+</revision>
+<revision>
+  <revnumber>take5.beta1</revnumber>
+  <date>30 March 2003</date>
 </revision>
 <revision>
   <revnumber>take5.alpha3</revnumber>
@@ -37,7 +43,7 @@
   <firstname>Igor</firstname><surname>Ruskih</surname>
   <affiliation>
     <address>
-      <email>ruiv@uic.nnov.ru</email>
+      <email>cail@nm.ru</email>
     </address>
   </affiliation>
 </author>

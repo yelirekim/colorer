@@ -29,7 +29,7 @@
 
     <xsl:variable name="nsURI" select="namespace::*[name() = $prefix]"/>
     <xsl:if test="not(namespace::*[name() = $prefix]) and
-                  ($prefix != '' or $targetNamespace != false() and not(starts-with($localname, $anonymous)) )">
+                  ($prefix != '' or $targetNamespace != '' and not(starts-with($localname, $anonymous)) )">
       <xsl:message>
  Warning: XML Schema validity error!
  No namespace with prefix '<xsl:value-of select="$prefix"/>' was defined for name '<xsl:value-of select="$qname"/>'
@@ -135,7 +135,7 @@
    - The Original Code is the Colorer Library xsd2hrc module.
    -
    - The Initial Developer of the Original Code is
-   - Cail Lomecb <ruiv@uic.nnov.ru>.
+   - Cail Lomecb <cail@nm.ru>.
    - Portions created by the Initial Developer are Copyright (C) 1999-2003
    - the Initial Developer. All Rights Reserved.
    -

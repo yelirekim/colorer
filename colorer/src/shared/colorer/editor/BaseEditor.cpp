@@ -97,17 +97,29 @@ void BaseEditor::setFileType(FileType *ftype){
   textParser->setFileType(currentFileType);
   invalidLine = 0;
 };
-void BaseEditor::setFileType(const String &fileType){
+FileType *BaseEditor::setFileType(const String &fileType){
   currentFileType = hrcParser->getFileType(&fileType);
   setFileType(currentFileType);
+  return currentFileType;
 }
-void BaseEditor::chooseFileType(const String *fileName){
-  if (lineSource != null){
-    currentFileType = hrcParser->chooseFileType(fileName, lineSource->getLine(0));
-  }else{
+FileType *BaseEditor::chooseFileType(const String *fileName){
+  if (lineSource == null){
     currentFileType = hrcParser->chooseFileType(fileName, null);
+  }else{
+    StringBuffer textStart;
+    int totalLength = 0;
+    for(int i = 0; i < 4; i++){
+      String *iLine = lineSource->getLine(i);
+      if (iLine == null) break;
+      textStart.append(iLine);
+      textStart.append(DString("\n"));
+      totalLength += iLine->length();
+      if (totalLength > 500) break;
+    };
+    currentFileType = hrcParser->chooseFileType(fileName, &textStart);
   };
   setFileType(currentFileType);
+  return currentFileType;
 }
 FileType *BaseEditor::getFileType(){
   return currentFileType;
@@ -345,7 +357,7 @@ void BaseEditor::leaveScheme(int lno, String *line, int sx, int ex, const Region
  * The Original Code is the Colorer Library.
  *
  * The Initial Developer of the Original Code is
- * Cail Lomecb <ruiv@uic.nnov.ru>.
+ * Cail Lomecb <cail@nm.ru>.
  * Portions created by the Initial Developer are Copyright (C) 1999-2003
  * the Initial Developer. All Rights Reserved.
  *

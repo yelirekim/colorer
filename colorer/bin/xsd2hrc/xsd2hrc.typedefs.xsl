@@ -63,7 +63,7 @@
     <xsl:call-template name="createScheme">
       <xsl:with-param name="name" select="concat($typename, '-content')"/>
       <xsl:with-param name="content">
-        <xsl:if test="xs:annotation/xs:documentation">
+        <xsl:if test="xs:annotation/xs:documentation and $drop-annotations = 'no'">
           <annotation><documentation>
             <xsl:value-of select="xs:annotation"/>
           </documentation></annotation>
@@ -169,7 +169,7 @@
    - The Original Code is the Colorer Library xsd2hrc module.
    -
    - The Initial Developer of the Original Code is
-   - Cail Lomecb <ruiv@uic.nnov.ru>.
+   - Cail Lomecb <cail@nm.ru>.
    - Portions created by the Initial Developer are Copyright (C) 1999-2003
    - the Initial Developer. All Rights Reserved.
    -

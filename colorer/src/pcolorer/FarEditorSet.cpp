@@ -447,8 +447,7 @@ FarEditor *FarEditorSet::getCurrentEditor(){
     int slash_idx = fnpath.lastIndexOf('\\');
     if (slash_idx == -1) slash_idx = fnpath.lastIndexOf('/');
     DString fn = DString(fnpath, slash_idx+1);
-    FileType *cft = hrcParser->chooseFileType(&fn, editor->getLine(0));
-    editor->setFileType(cft);
+    editor->chooseFileType(&fn);
     editor->setRegionMapper(regionMapper);
   };
   return editor;
@@ -497,7 +496,7 @@ void FarEditorSet::dropAllEditors(){
  * The Original Code is the Colorer Library.
  *
  * The Initial Developer of the Original Code is
- * Cail Lomecb <ruiv@uic.nnov.ru>.
+ * Cail Lomecb <cail@nm.ru>.
  * Portions created by the Initial Developer are Copyright (C) 1999-2003
  * the Initial Developer. All Rights Reserved.
  *

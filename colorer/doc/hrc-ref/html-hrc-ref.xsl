@@ -11,10 +11,12 @@ It imports docbook.xsl stylesheet and introduce some changes
 into it's logic
 -->
 
-<xsl:import href="file:/d:\programs\xml\docbook/docbook-xsl/xhtml/docbook.xsl"/>
+<!--<xsl:import href="file:/d:\programs\xml\docbook/docbook-xsl/xhtml/docbook.xsl"/>-->
+<xsl:import href="file:/c:/install/xml/docbook-xsl/xhtml/docbook.xsl"/>
+
 <xsl:include href="html-titlepage.xsl"/>
 
-<xsl:output method='xml' encoding="KOI8-r"/>
+<xsl:output method='html' encoding="KOI8-r"/>
 
 
 <xsl:param name="html.stylesheet">../styles/styles.css ../styles/hrc-ref.css</xsl:param>

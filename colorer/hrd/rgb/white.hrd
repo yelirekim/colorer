@@ -51,6 +51,7 @@
 
   <assign name="def:Directive" fore="#004a43"/>
   <assign name="def:Parameter" fore="#074726"/>
+  <assign name="def:ParameterUnknown" fore="#274796"/>
 
   <assign name="def:Tag" fore="#5f5035"/>
   <assign name="def:OpenTag" fore="#a65700"/>
@@ -76,8 +77,8 @@
   <assign name="def:Date" fore="#009797"/>
   <assign name="def:Time" fore="#8745a0"/>
 
-  <assign name="def:PairStart" fore="#a04040"/>
-  <assign name="def:PairEnd" fore="#a04040"/>
+  <assign name="def:PairStart" fore="#f0a0a0"/>
+  <assign name="def:PairEnd" fore="#f0a0a0"/>
   <assign name="def:PairStrongStart" fore="#880088"/>
   <assign name="def:PairStrongEnd" fore="#880088"/>
 

@@ -37,6 +37,8 @@ With help of:
       <region name="plPodText" parent="default"/>
       <region name="plPodSel" parent="String"/>
 
+      <region name="SubOutline" parent="def:Outlined"/>
+      <region name="PackageOutline" parent="def:Outlined"/>
 
       <scheme name="perlBuildinVars">
          <keywords region="plVar">
@@ -947,7 +949,10 @@ With help of:
          <block start="/;?\#/" end="/$/" region="plComment" scheme="Comment"/>
 <!-- Variables -->
          <inherit scheme="perlVars"/>
-         <regexp match="/\b(sub|package) \s+ \M (?{Function}[\w_']+) /x" region="plWord"/>
+         <regexp match="/\b(sub) \s+ \M (?{SubOutline}[\w_']+) /x" region="plWord"/>
+         <regexp match="/\b(package) \s+ \M (?{PackageOutline}[\w_']+) /x" region="plWord"/>
+<!-- module::var -->
+         <regexp match="/\b\w[\w\d]*\s*::\s*\w[\w\d]*\b/" region="plWord"/>
 <!-- perl 5.6.0 number-encoded strings -->
          <regexp match="/\bv(\d+)(\.\d+)*\b/" region0="plString"/>
          <regexp match="/\b(\d+)(\.\d+){2,}\b/" region0="plString"/>
@@ -1335,7 +1340,7 @@ With help of:
    - The Original Code is the Colorer Library.
    -
    - The Initial Developer of the Original Code is
-   - Cail Lomecb <ruiv@uic.nnov.ru>.
+   - Cail Lomecb <cail@nm.ru>.
    - Portions created by the Initial Developer are Copyright (C) 1999-2003
    - the Initial Developer. All Rights Reserved.
    -

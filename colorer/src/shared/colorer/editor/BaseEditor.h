@@ -70,11 +70,11 @@ public:
   /** Initial HRC type, used for parse processing.
       If changed during processing, all text information is invalidated.
   */
-  void setFileType(const String &fileType);
+  FileType *setFileType(const String &fileType);
   /** Tries to choose appropriate file type from HRC database
       using passed fileName and first line of text (if available through lineSource)
   */
-  void chooseFileType(const String *fileName);
+  FileType *chooseFileType(const String *fileName);
 
   /** Returns currently used HRC file type */
   FileType *getFileType();
@@ -249,7 +249,7 @@ protected:
  * The Original Code is the Colorer Library.
  *
  * The Initial Developer of the Original Code is
- * Cail Lomecb <ruiv@uic.nnov.ru>.
+ * Cail Lomecb <cail@nm.ru>.
  * Portions created by the Initial Developer are Copyright (C) 1999-2003
  * the Initial Developer. All Rights Reserved.
  *

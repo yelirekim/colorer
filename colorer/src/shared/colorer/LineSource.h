@@ -31,6 +31,8 @@ public:
     Returns String class pointer, which incapsulates information
     about line with number <code>lno</code>.
     @note Returned pointer must be valid until next getLine method call.
+          If requested line can't be returned, fe there is no line with the passed
+          index, method must return null.
     @param lno Requested line number
     @return Unicode string, enwrapped into String class.
   */
@@ -58,7 +60,7 @@ protected:
  * The Original Code is the Colorer Library.
  *
  * The Initial Developer of the Original Code is
- * Cail Lomecb <ruiv@uic.nnov.ru>.
+ * Cail Lomecb <cail@nm.ru>.
  * Portions created by the Initial Developer are Copyright (C) 1999-2003
  * the Initial Developer. All Rights Reserved.
  *
